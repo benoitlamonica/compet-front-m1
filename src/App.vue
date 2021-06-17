@@ -1,18 +1,14 @@
 <template>
-  <div id="app">
-    <p>Hello</p>
-    <img :src="img" alt="" />
-  </div>
+  <Navbar />
 </template>
 
 <script>
-import img from "./assets/logo.png";
+import Navbar from "./modules/Navbar";
+
 export default {
   name: "App",
-  data() {
-    return {
-      img: img,
-    };
+  components: {
+    Navbar,
   },
 };
 </script>
