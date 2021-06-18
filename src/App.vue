@@ -3,9 +3,10 @@
     <header>
       <Navbar />
     </header>
-    <body>
+    <main>
       <Hero />
-    </body>
+      <StepsBloc />
+    </main>
     <footer>
       <Footer />
     </footer>
@@ -16,6 +17,7 @@
 import Navbar from "./modules/Navbar";
 import Hero from "./modules/Hero";
 import Footer from "./modules/Footer";
+import StepsBloc from "./modules/StepsBloc";
 
 export default {
   name: "App",
@@ -23,6 +25,7 @@ export default {
     Navbar,
     Hero,
     Footer,
+    StepsBloc,
   },
 };
 </script>

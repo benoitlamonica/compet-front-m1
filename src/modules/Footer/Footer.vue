@@ -68,7 +68,6 @@ export default {
           padding-right: 20px;
           a {
             color: $albatre;
-            text-decoration: none;
             font-size: 16px;
             font-family: "Kulim-regular";
           }
