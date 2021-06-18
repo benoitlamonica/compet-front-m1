@@ -1,10 +1,9 @@
 <template>
   <button class="button">
-<<<<<<< HEAD
-    <a class="link" :href="link" :aria-label="ariaLabel">{{ text }}</a>
-=======
-    <router-link :to="link">{{ text }}</router-link>
->>>>>>> 495d84a (Routes)
+    <router-link v-if="isRouter" :to="link"
+      ><a :aria-label="ariaLabel">{{ text }}</a></router-link
+    >
+    <a v-else :href="link" :aria-label="ariaLabel">{{ text }}</a>
   </button>
 </template>
 
@@ -14,12 +13,9 @@ export default {
 
   props: {
     text: { type: String, required: true },
-<<<<<<< HEAD
-    link: { type: URL, required: true },
     ariaLabel: { type: String, required: true },
-=======
-    link: { type: String, required: false },
->>>>>>> 495d84a (Routes)
+    link: { type: String, required: false, default: "#" },
+    isRouter: { type: Boolean, required: true },
   },
 };
 </script>

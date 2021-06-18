@@ -18,7 +18,12 @@
         text="Une fois par semaine, votre chef cuisine à votre domicile et range vos plats prêts à être dégustés dans votre frigo. En plus, il fait la vaisselle !"
       />
     </div>
-    <Button text="Commander mes repas" link="https://" />
+    <Button
+      :isRouter="false"
+      ariaLabel="Step"
+      text="Commander mes repas"
+      link="https://"
+    />
   </div>
 </template>
 

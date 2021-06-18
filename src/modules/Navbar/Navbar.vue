@@ -11,6 +11,7 @@
     </div>
     <div>
       <Button
+        :isRouter="false"
         text="Commander mes repas"
         ariaLabel="Commander mes repas"
         link="https://persiletromarin.fr/inscription"

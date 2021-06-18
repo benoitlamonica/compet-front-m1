@@ -8,16 +8,13 @@
         Trouvez les plats cuisinés par nos chefs cette semaine qui pourraient
         vous régaler vous et votre famille en seulement quelques clics.
       </p>
-<<<<<<< HEAD
       <Button
+        isRouter
+        ariaLabel="Je trouve mes plats"
+        link="/game"
         text="Je trouve mes plats"
-        link="https://persiletromarin.fr/"
-        ariaLabel="Trouver mon plat"
-        class="cta-button"
+        class="button"
       />
-=======
-      <Button link="/game" text="Je trouve mes plats" class="button" />
->>>>>>> 495d84a (Routes)
     </div>
     <div class="plate-img">
       <img src="@/assets/img/hero_landing.png" alt="Bol de soupe" />
