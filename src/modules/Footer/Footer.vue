@@ -1,15 +1,9 @@
 <template>
   <div class="footer">
-    <div class="left">
-      <a href="https://persiletromarin.fr/">
-        <img
-          class="logo"
-          src="@/assets/img/logo_blanc.png"
-          alt="Persil et Romarin Logo"
-        />
-      </a>
-    </div>
-    <div class="center">
+    <a class="logo" href="https://persiletromarin.fr/">
+      <img src="@/assets/img/logo_blanc.png" alt="Persil et Romarin Logo" />
+    </a>
+    <div class="centerContent">
       <div class="nav">
         <ul>
           <li><a href="https://persiletromarin.fr/">Accueil</a></li>
@@ -27,11 +21,14 @@
       </div>
       <div class="copyright">Copyright © 2021 | Persil et Romarin</div>
     </div>
-    <div class="right">
+    <div class="socials">
       <p>Suivez-nous</p>
       <div class="rs">
-        <img src="" alt="" />
-        <img src="" alt="" />
+        <img
+          src="@/assets/img/icon-instagram.png"
+          alt="instagram redirection"
+        />
+        <img src="@/assets/img/icon-fb.png" alt="facebook redirection" />
       </div>
     </div>
   </div>
@@ -47,16 +44,20 @@ export default {
 .footer {
   justify-content: space-between;
   display: flex;
-  padding: 28px 120px 73px 120px;
+  padding: 70px 120px 73px 120px;
   height: 203px;
   background-color: $dark-chocolate;
-  .left {
-    .logo {
-      width: 165px;
-      height: 102px;
+  .logo {
+    margin-top: -35px;
+    width: 165px;
+    height: 102px;
+    img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
     }
   }
-  .center {
+  .centerContent {
     .nav {
       padding-bottom: 43px;
       ul {
@@ -78,12 +79,24 @@ export default {
       color: $albatre;
       text-align: center;
       font-size: 14px;
+      font-family: "Kulim-regular";
     }
   }
-  .right {
+  .socials {
     color: $albatre;
+    p {
+      padding-bottom: 10px;
+    }
     .rs {
       display: flex;
+      font-size: 14px;
+      font-family: "Kulim-regular";
+      img {
+        height: 16px;
+        width: 16px;
+        object-fit: contain;
+        margin-right: 12px;
+      }
     }
   }
 }
