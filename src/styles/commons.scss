@@ -1,12 +1,4 @@
-@font-face {
-  font-family: "Kulim-regular";
-  src: url("../assets/typo/KulimPark-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Kulim-semi-bold";
-  src: url("../assets/typo/KulimPark-SemiBold.ttf");
-}
+@import url("https://fonts.googleapis.com/css2?family=Kulim+Park:wght@300;400;600&display=swap");
 
 @font-face {
   font-family: "Butler-extra-bold";
@@ -15,30 +7,31 @@
 
 body {
   background-color: $albatre;
-  font-family: "Kulim-regular";
+  font-family: $ff-kulim;
 }
 p {
-  font-family: "Kulim-regular";
+  font-family: $ff-kulim;
 }
 
 h1 {
   font-size: 55px;
-  font-family: "Butler-extra-bold";
+  font-family: $ff-butler;
 }
 
 h2 {
   font-size: 40px;
-  font-family: "Butler-extra-bold";
+  font-family: $ff-butler;
 }
 
 h3 {
   font-size: 24px;
-  font-family: "Kulim-semi-bold";
+  font-family: $ff-kulim;
+  font-weight: 600;
 }
 
 h4 {
   font-size: 32px;
-  font-family: "Butler-extra-bold";
+  font-family: $ff-butler;
 }
 
 button {
@@ -50,6 +43,6 @@ button {
     color: $albatre;
     text-decoration: none;
     font-size: 16px;
-    font-family: "Kulim-regular";
+    font-family: $ff-kulim;
   }
 }
