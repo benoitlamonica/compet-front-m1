@@ -2,7 +2,7 @@
   <div class="navbar">
     <div class="left">
       <a href="https://persiletromarin.fr/">
-        <img class="logo" src="assets/img/logo.svg" alt="" />
+        <img class="logo" src="@/assets/img/logo_couleur.png" alt="" />
       </a>
     </div>
     <div class="right">
@@ -20,15 +20,16 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 0;
+  padding-top: 24px;
 }
 
 .logo {
-  height: 60px;
+  width: 150px;
+  height: 100%;
 }
 </style>

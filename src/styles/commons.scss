@@ -1,8 +1,49 @@
-a {
-  color: inherit;
-  text-decoration: none;
+@import url("https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+@font-face {
+  font-family: "Kulim-semi-bold";
+  src: url("/assets/typo/KulimPark-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Butler-extra-bold";
+  src: url("/assets/typo/Butler_ExtraBold.otf");
 }
 
 body {
-  background-color: red;
+  background-color: $albatre;
+  font-family: "Kulim Park", sans-serif;
+}
+
+h1 {
+  font-size: 55px;
+  font-family: "Butler-extra-bold";
+}
+
+h2 {
+  font-size: 40px;
+  font-family: "Butler-extra-bold";
+}
+
+h3 {
+  font-size: 24px;
+  font-family: "Kulim-semi-bold";
+}
+
+h4 {
+  font-size: 32px;
+  font-family: "Butler-extra-bold";
+}
+
+button {
+  background-color: $bistre;
+  border-radius: 3px;
+  padding: 20px 26px 20px 26px;
+  border: none;
+  a {
+    color: $albatre;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Kulim Park";
+  }
 }
