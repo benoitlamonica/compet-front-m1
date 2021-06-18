@@ -8,7 +8,7 @@
         Trouvez les plats cuisinés par nos chefs cette semaine qui pourraient
         vous régaler vous et votre famille en seulement quelques clics.
       </p>
-      <Button class="button" />
+      <Button text="Je trouve mes plats" class="button" />
     </div>
     <div class="right">
       <img src="@/assets/img/hero_landing.png" alt="Bol de soupe" />
@@ -30,6 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
+  padding: 0 120px;
   position: relative;
   .left {
     position: relative;
@@ -49,7 +50,7 @@ export default {
   }
   .right {
     position: absolute;
-    right: -120px;
+    right: 0;
     top: -120px;
   }
   .herbs {

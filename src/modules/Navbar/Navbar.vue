@@ -2,11 +2,15 @@
   <div class="navbar">
     <div class="left">
       <a href="https://persiletromarin.fr/">
-        <img class="logo" src="@/assets/img/logo_couleur.png" alt="" />
+        <img
+          class="logo"
+          src="@/assets/img/logo_couleur.png"
+          alt="Persil et Romarin logo"
+        />
       </a>
     </div>
     <div class="right">
-      <Button />
+      <Button text="Commander mes repas" />
     </div>
   </div>
 </template>
@@ -22,6 +26,7 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
+  padding: 0 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
