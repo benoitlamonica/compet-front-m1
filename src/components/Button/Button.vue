@@ -1,8 +1,8 @@
 <template>
   <button class="button">
-    <router-link v-if="isRouter" :to="link"
-      ><a :aria-label="ariaLabel">{{ text }}</a></router-link
-    >
+    <router-link v-if="isRouter" :to="link">
+      <a :aria-label="ariaLabel">{{ text }}</a>
+    </router-link>
     <a v-else :href="link" :aria-label="ariaLabel">{{ text }}</a>
   </button>
 </template>
