@@ -13,7 +13,7 @@
         ariaLabel="Je trouve mes plats"
         link="/game"
         text="Je trouve mes plats"
-        class="button"
+        class="cta-button"
       />
     </div>
     <div class="plate-img">
@@ -49,6 +49,7 @@ export default {
       padding-top: 16px;
       font-size: 20px;
       color: $dark-chocolate;
+      font-weight: 300;
     }
     .cta-button {
       margin-top: 32px;

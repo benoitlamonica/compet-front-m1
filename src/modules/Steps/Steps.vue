@@ -1,6 +1,9 @@
 <template>
   <div class="step-container">
-    <div class="number">{{ number }}</div>
+    <div class="number-container">
+      <p class="pre-number">.0</p>
+      <div class="number">{{ number }}</div>
+    </div>
     <div class="text-infos">
       <h3 class="title">{{ title }}</h3>
       <div class="text">{{ text }}</div>
@@ -24,11 +27,32 @@ export default {
 .step-container {
   display: flex;
   width: 100%;
-  .title {
-    color: $bistre;
+  .number-container {
+    font-family: $ff-butler;
+    display: flex;
+    color: $olive;
+    margin-right: 18px;
+    .pre-number {
+      font-size: 50px;
+    }
+    .number {
+      font-size: 77px;
+      //margin-top: 12px;
+    }
   }
-  .text {
-    font-size: 16px;
+  .text-infos {
+    text-align: left;
+    padding-right: 16px;
+    margin-bottom: 58px;
+    .title {
+      font-weight: 600;
+      color: $bistre;
+      margin-bottom: 16px;
+    }
+    .text {
+      font-weight: 300;
+      font-size: 16px;
+    }
   }
 }
 </style>
