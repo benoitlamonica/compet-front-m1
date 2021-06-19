@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="steps-container">
     <h2 class="title">Votre chef à portée de clic</h2>
     <div class="steps">
       <Steps
@@ -18,7 +18,7 @@
         text="Une fois par semaine, votre chef cuisine à votre domicile et range vos plats prêts à être dégustés dans votre frigo. En plus, il fait la vaisselle !"
       />
     </div>
-    <Button text="Commander mes repas" />
+    <Button text="Commander mes repas" link="https://" />
   </div>
 </template>
 
@@ -33,8 +33,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  padding: 190px 120px 0 120px;
+.steps-container {
+  padding: 190px 120px 50px 120px;
   text-align: center;
   .title {
     padding-bottom: 71px;
@@ -42,7 +42,6 @@ export default {
   }
   .steps {
     display: flex;
-    padding-bottom: 50px;
   }
 }
 </style>

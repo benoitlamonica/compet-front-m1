@@ -1,19 +1,24 @@
 <template>
-  <div class="container">
-    <div class="left">
+  <div class="hero-container">
+    <div class="text-bloc">
       <h1 class="title">
         Cette semaine c’est nos chefs qui cuisinent chez vous !
       </h1>
-      <p>
+      <p class="text">
         Trouvez les plats cuisinés par nos chefs cette semaine qui pourraient
         vous régaler vous et votre famille en seulement quelques clics.
       </p>
-      <Button text="Je trouve mes plats" class="button" />
+      <Button
+        text="Je trouve mes plats"
+        link="https://persiletromarin.fr/"
+        ariaLabel="Trouver mon plat"
+        class="cta-button"
+      />
     </div>
-    <div class="right">
+    <div class="plate-img">
       <img src="@/assets/img/hero_landing.png" alt="Bol de soupe" />
     </div>
-    <div class="herbs">
+    <div class="herbs-img">
       <img src="@/assets/img/top_herbes.png" alt="Persil et romarin" />
     </div>
   </div>
@@ -29,34 +34,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
+.hero-container {
   padding: 0 120px;
   position: relative;
-  .left {
+  .text-bloc {
     position: relative;
     padding-top: 185px;
     max-width: 45vw;
     .title {
       color: $olive;
     }
-    p {
+    .text {
       padding-top: 16px;
       font-size: 20px;
       color: $dark-chocolate;
     }
-    .button {
+    .cta-button {
       margin-top: 32px;
     }
   }
-  .right {
+  .plate-img {
     position: absolute;
     right: 0;
     top: -120px;
+    z-index: -1;
   }
-  .herbs {
+  .herbs-img {
     position: absolute;
     left: -120px;
     top: 158px;
+    z-index: -1;
   }
 }
 </style>

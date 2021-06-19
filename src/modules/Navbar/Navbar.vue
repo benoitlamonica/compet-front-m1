@@ -1,6 +1,6 @@
 <template>
-  <div class="navbar">
-    <div class="left">
+  <nav class="navbar">
+    <div>
       <a href="https://persiletromarin.fr/">
         <img
           class="logo"
@@ -9,10 +9,14 @@
         />
       </a>
     </div>
-    <div class="right">
-      <Button text="Commander mes repas" />
+    <div>
+      <Button
+        text="Commander mes repas"
+        ariaLabel="Commander mes repas"
+        link="https://persiletromarin.fr/inscription"
+      />
     </div>
-  </div>
+  </nav>
 </template>
 
 <script>
@@ -31,10 +35,9 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding-top: 24px;
-}
 
-.logo {
-  width: 150px;
-  height: 100%;
+  .logo {
+    width: 150px;
+  }
 }
 </style>
