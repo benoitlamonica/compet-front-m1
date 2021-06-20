@@ -9,38 +9,31 @@
         />
       </a>
     </div>
-    <!-- <div>
+    <div>
       <Button
         :isRouter="false"
         text="Commander mes repas"
         ariaLabel="Commander mes repas"
         link="https://persiletromarin.fr/inscription"
       />
-    </div> -->
+    </div>
   </nav>
 </template>
 
 <script>
-//import Button from "@/components/Button";
+import Button from "@/components/Button";
 
 export default {
   name: "Navbar",
-  //components: { Button },
+  components: { Button },
 };
 </script>
 
 <style lang="scss" scoped>
 .navbar {
-<<<<<<< HEAD
-  padding: 0 120px;
-  // display: flex;
-  // align-items: center;
-  // justify-content: space-between;
-=======
   display: flex;
   align-items: center;
   justify-content: space-between;
->>>>>>> 3ec8e15 (Stepper + Lot of thing)
   padding-top: 24px;
 
   .logo {

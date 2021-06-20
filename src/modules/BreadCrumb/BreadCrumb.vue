@@ -48,6 +48,7 @@ export default {
         if (this.innerWidth == val) {
           clearInterval(animProgress);
         }
+<<<<<<< HEAD
       }, 20);
       this.intervalId = animProgress;
     },
@@ -55,6 +56,12 @@ export default {
   mounted() {
     this.valueChoosen = 33;
   },
+=======
+      }, 10);
+      this.intervalId = animProgress;
+    },
+  },
+>>>>>>> 5f0b991 (Stepper + Lot of thing)
 };
 </script>
 
