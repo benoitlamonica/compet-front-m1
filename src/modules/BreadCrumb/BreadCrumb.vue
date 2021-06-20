@@ -26,8 +26,8 @@ export default {
   name: "BreadCrumb",
   data() {
     return {
-      innerWidth: 10,
-      valueChoosen: 10,
+      innerWidth: 0,
+      valueChoosen: 0,
       intervalId: null,
     };
   },
@@ -48,9 +48,12 @@ export default {
         if (this.innerWidth == val) {
           clearInterval(animProgress);
         }
-      }, 10);
+      }, 20);
       this.intervalId = animProgress;
     },
+  },
+  mounted() {
+    this.valueChoosen = 33;
   },
 };
 </script>
