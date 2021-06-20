@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Kulim+Park:wght@300;400;600&display=swap");
-
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
 @font-face {
   font-family: "Butler-extra-bold";
   src: url("../assets/typo/Butler_ExtraBold.otf");
@@ -27,6 +28,9 @@ body {
 }
 p {
   line-height: 20px;
+}
+a {
+  color: $bistre;
 }
 
 h1 {

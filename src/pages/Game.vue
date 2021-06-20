@@ -1,27 +1,24 @@
 <template>
   <div>
-    <div v-if="allMainIng != null" class="ing-list">
-      <div v-for="ing in allMainIng" :key="ing.id" class="ing-single">
-        <p>{{ ing.name }}</p>
-      </div>
-    </div>
-    <router-link to="/">Retour</router-link>
+    <Navbar />
+    <Stepper />
+    <i class="fas fa-long-arrow-alt-left"></i>
+    <router-link to="/">
+      Retour
+    </router-link>
   </div>
 </template>
 
 <script>
-import axios from "axios";
+import Navbar from "../modules/Navbar";
+import Stepper from "../modules/Stepper/Stepper.vue";
 export default {
+  components: { Navbar, Stepper },
   name: "Game",
   data() {
     return {
       allMainIng: null,
     };
-  },
-  mounted() {
-    axios.get("http://127.0.0.1:8000/ingredient/main").then((rep) => {
-      this.allMainIng = rep.data;
-    });
   },
 };
 </script>

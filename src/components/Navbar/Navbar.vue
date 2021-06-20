@@ -31,10 +31,16 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
+<<<<<<< HEAD
   padding: 0 120px;
   // display: flex;
   // align-items: center;
   // justify-content: space-between;
+=======
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+>>>>>>> 3ec8e15 (Stepper + Lot of thing)
   padding-top: 24px;
 
   .logo {
