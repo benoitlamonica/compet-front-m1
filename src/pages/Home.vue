@@ -6,6 +6,11 @@
     <main>
       <Hero />
       <StepsBloc />
+      <Htwoandtext
+        title="Un chef dans votre cuisine pour vos repas de la semaine"
+        text="Les chefs qui composent le réseau Persil & Romarin sont l’âme du service. C’est parce qu’ils sont tous professionnels et talentueux que les plats qu’ils préparent sont aussi bons & gourmands."
+      />
+      <Concept />
       <ReviewBloc />
     </main>
     <footer>
@@ -20,6 +25,9 @@ import Hero from "@/modules/Hero";
 import Footer from "@/modules/Footer";
 import StepsBloc from "@/modules/StepsBloc";
 import ReviewBloc from "@/modules/ReviewBloc";
+import Htwoandtext from "@/components/Htwoandtext";
+import Concept from "@/modules/ConceptBloc/Concept.vue";
+
 export default {
   name: "Home",
   components: {
@@ -28,6 +36,8 @@ export default {
     Footer,
     StepsBloc,
     ReviewBloc,
+    Htwoandtext,
+    Concept,
   },
 };
 </script>

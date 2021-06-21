@@ -6,15 +6,15 @@
       :alt="alt"
     />
     <div class="text-review">
-      <div class="name">
+      <p class="name">
         {{ name }}
-      </div>
-      <div class="text">
+      </p>
+      <p class="text">
         {{ text }}
-      </div>
-      <div class="date">
+      </p>
+      <p class="date">
         {{ date }}
-      </div>
+      </p>
     </div>
   </div>
 </template>

@@ -2,11 +2,11 @@
   <div class="step-container">
     <div class="number-container">
       <p class="pre-number">.0</p>
-      <div class="number">{{ number }}</div>
+      <p class="number">{{ number }}</p>
     </div>
     <div class="text-infos">
       <h3 class="title">{{ title }}</h3>
-      <div class="text">{{ text }}</div>
+      <p class="text">{{ text }}</p>
     </div>
   </div>
 </template>
@@ -34,8 +34,10 @@ export default {
     margin-right: 18px;
     .pre-number {
       font-size: 50px;
+      font-family: $ff-butler-medium;
     }
     .number {
+      font-family: $ff-butler-medium;
       font-size: 77px;
       //margin-top: 12px;
     }
