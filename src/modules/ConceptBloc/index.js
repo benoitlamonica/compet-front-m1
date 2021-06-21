@@ -1,2 +1,1 @@
-export { default } from './Concept
-';
+export { default } from './Concept';

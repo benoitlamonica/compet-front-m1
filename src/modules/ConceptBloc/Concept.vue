@@ -58,6 +58,7 @@ export default {
     .concept-link {
       color: $bistre;
       font-size: 18px;
+      font-weight: 600;
     }
     .concept-img {
       height: 100%;
