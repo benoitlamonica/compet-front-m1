@@ -27,9 +27,16 @@ export default {
   data() {
     return {
       innerWidth: 0,
-      valueChoosen: 0,
       intervalId: null,
+      valueChoosen: 0,
     };
+  },
+  props: {
+    value: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
   },
   watch: {
     valueChoosen: function(val) {
@@ -48,20 +55,17 @@ export default {
         if (this.innerWidth == val) {
           clearInterval(animProgress);
         }
-<<<<<<< HEAD
-      }, 20);
+      }, 5);
+
       this.intervalId = animProgress;
+    },
+    value: function(newVal) {
+      this.valueChoosen = newVal;
     },
   },
   mounted() {
-    this.valueChoosen = 33;
+    this.valueChoosen = this.value;
   },
-=======
-      }, 10);
-      this.intervalId = animProgress;
-    },
-  },
->>>>>>> 5f0b991 (Stepper + Lot of thing)
 };
 </script>
 

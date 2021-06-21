@@ -2,10 +2,6 @@
   <wrapper>
     <Navbar />
     <Stepper />
-    <i class="fas fa-long-arrow-alt-left"></i>
-    <router-link to="/">
-      Retour
-    </router-link>
   </wrapper>
 </template>
 
