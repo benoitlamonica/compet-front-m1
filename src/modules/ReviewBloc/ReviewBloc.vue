@@ -7,6 +7,7 @@
         name="Jean M"
         text="Le service de qualité, le plaisir d'échanger avec le cuisinier, les plats prêts pour la semaine, la propreté de la cuisine après le départ du chef, le large choix de plats, les tupperwares bien remplis"
         date="12/06/2021"
+        alt="avis 1"
       />
       <Review
         filename="male-icon-1.png"
@@ -14,12 +15,14 @@
         name="Fabrice J"
         text="Le service de qualité, le plaisir d'échanger avec le cuisinier, les plats prêts pour la semaine, la propreté de la cuisine après le départ du chef, le large choix de plats, les tupperwares bien remplis"
         date="27/11/2020"
+        alt="avis 2"
       />
       <Review
         filename="female-icon.png"
         name="Marie F"
         text="Le service de qualité, le plaisir d'échanger avec le cuisinier, les plats prêts pour la semaine, la propreté de la cuisine après le départ du chef, le large choix de plats, les tupperwares bien remplis"
         date="13/11/2021"
+        alt="avis 3"
       />
     </div>
   </div>

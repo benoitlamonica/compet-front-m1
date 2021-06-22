@@ -45,7 +45,7 @@ h4 {
 }
 
 button {
-  background-color: $bistre;
+  background-color: $olive;
   border-radius: 3px;
   padding: 20px 26px 20px 26px;
   border: none;
@@ -54,5 +54,8 @@ button {
     text-decoration: none;
     font-size: 16px;
     font-family: $ff-kulim;
+  }
+  &:hover {
+    background-color: $bistre;
   }
 }
