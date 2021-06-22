@@ -22,7 +22,8 @@
       :isRouter="false"
       ariaLabel="Step"
       text="Commander mes repas"
-      link="https://"
+      link="https://persiletromarin.fr"
+      class="button-secondary"
     />
   </div>
 </template>
@@ -47,6 +48,20 @@ export default {
   }
   .steps {
     display: flex;
+  }
+}
+@media screen and (max-width: 768px) {
+  .steps-container {
+    padding: 0 14px 80px 14px;
+    .title {
+      font-size: 32px;
+      line-height: 38px;
+      padding-bottom: 44px;
+    }
+    .steps {
+      display: block;
+      margin-bottom: 36px;
+    }
   }
 }
 </style>

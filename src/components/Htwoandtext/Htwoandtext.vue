@@ -28,4 +28,20 @@ export default {
     font-weight: 300;
   }
 }
+@media screen and (max-width: 768px) {
+  .h-text {
+    padding: 0 14px;
+    width: 100%;
+    .title {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 24px;
+    }
+    .text {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 32px;
+    }
+  }
+}
 </style>

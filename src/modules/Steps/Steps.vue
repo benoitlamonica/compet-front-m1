@@ -57,4 +57,25 @@ export default {
     }
   }
 }
+@media screen and (max-width: 768px) {
+  .step-container {
+    display: block;
+    .number-container {
+      margin-bottom: 17px;
+      justify-content: center;
+    }
+    .text-infos {
+      text-align: center;
+      .title {
+        font-size: 22px;
+        line-height: 25px;
+        margin-bottom: 12px;
+      }
+      .text {
+        margin-bottom: 36px;
+        line-height: 18px;
+      }
+    }
+  }
+}
 </style>

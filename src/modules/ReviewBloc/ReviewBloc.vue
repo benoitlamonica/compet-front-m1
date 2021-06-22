@@ -53,4 +53,23 @@ export default {
     }
   }
 }
+@media screen and (max-width: 768px) {
+  .reviews-container {
+    padding: 56px 0 0 14px;
+    .title {
+      text-align: left;
+      font-size: 24px;
+      line-height: 28px;
+      padding-bottom: 32px;
+      padding-right: 14px;
+    }
+    .reviews {
+      overflow: scroll;
+      display: flex;
+      .middle-review {
+        margin: 0 21px;
+      }
+    }
+  }
+}
 </style>

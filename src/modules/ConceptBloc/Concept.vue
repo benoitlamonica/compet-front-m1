@@ -1,5 +1,8 @@
 <template>
   <div class="concept-container">
+    <div class="concept-img-mobile">
+      <img src="@/assets/img/last_section_chef.png" alt="chef en cuisine" />
+    </div>
     <div class="concept-text">
       <h2 class="concept-title">
         Vos repas pour la semaine préparés chez vous par nos Chefs
@@ -61,12 +64,63 @@ export default {
       font-weight: 600;
     }
     .concept-img {
+      border-radius: 5px;
       height: 100%;
       width: 100%;
       img {
         height: 100%;
         width: 100%;
         object-fit: cover;
+      }
+    }
+  }
+  .concept-img-mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .concept-container {
+    padding: 0 15px;
+    display: block;
+    .concept-text {
+      width: 100%;
+      .concept-title {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 12px;
+      }
+      .concept-subtitle {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 24px;
+      }
+      .concept-detail {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 24px;
+        .pandr {
+          font-weight: bold;
+        }
+      }
+      .concept-link {
+        font-size: 18px;
+      }
+      margin-bottom: 80px;
+    }
+    .concept-img {
+      display: none;
+    }
+    .concept-img-mobile {
+      display: block;
+      height: 375px;
+      width: 100%;
+      margin-bottom: 32px;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        object-position: top;
       }
     }
   }

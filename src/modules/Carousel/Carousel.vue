@@ -1,5 +1,5 @@
 <template>
-  <div class="carousel">
+  <div class="carousel-container">
     <div class="carousel-view">
       <transition-group class="carousel" tag="div">
         <div v-for="slide in slidesData" class="slide" :key="slide.id">
@@ -77,7 +77,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.carousel {
+.carousel-container {
   overflow: hidden;
   margin-top: 56px;
   margin-bottom: 125px;
@@ -106,6 +106,15 @@ export default {
       justify-content: center;
       align-items: center;
       transition: transform 0.3s ease-in-out;
+
+      .chief-img {
+        height: 100%;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
     }
     .slide:first-of-type {
       opacity: 0;
@@ -125,7 +134,7 @@ export default {
       }
     }
   }
-  ///end carousel
+  ///end img carousel
 
   .text-view {
     width: 50vw;
@@ -152,28 +161,6 @@ export default {
       transition: transform 0.3s ease-in-out;
     }
 
-    .card-enter,
-    .card-leave-to {
-      opacity: 0;
-      transform: scale(0);
-    }
-    .card-enter-to {
-      opacity: 1;
-      transform: scale(1);
-    }
-    .card-move {
-      opacity: 1;
-      transition: all 0.5s;
-    }
-
-    .chief-img {
-      height: 100%;
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
-    }
     .chief-text {
       .chief-title {
         color: $olive;
@@ -193,6 +180,73 @@ export default {
         color: $bistre;
         font-size: 18px;
         font-weight: 600;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    display: block;
+    .carousel-view {
+      padding: 0 14px;
+      width: 100%;
+      .carousel {
+        width: 100%;
+      }
+      .slide {
+        flex: 0 0 100%;
+        height: 25em;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+      .carousel-controls {
+        position: absolute;
+        transform-origin: center;
+        transform: translate(50%);
+        top: 210%;
+        right: 50%;
+        .carousel-controls__button {
+          padding: 4px 24px;
+          svg {
+            height: 15;
+          }
+        }
+      }
+    }
+    .text-view {
+      width: 100%;
+      .card {
+        width: 100%;
+        .carousel-text {
+          height: 35rem;
+          padding: 0 14px;
+        }
+      }
+      .chief-text {
+        .chief-title {
+          font-size: 32px;
+          line-height: 38px;
+          margin-bottom: 6px;
+        }
+        .chief-subtitle {
+          font-size: 18px;
+          line-height: 20px;
+          margin-bottom: 16px;
+        }
+        .chief-detail {
+          line-height: 26px;
+          font-size: 18px;
+          margin-bottom: 32px;
+        }
+        .chief-link {
+          text-align: center;
+          color: $bistre;
+          font-size: 18px;
+          font-weight: 600;
+        }
       }
     }
   }

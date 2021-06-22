@@ -63,4 +63,14 @@ export default {
     }
   }
 }
+@media screen and (max-width: 768px) {
+  .review-container {
+    width: 319px;
+    height: 319px;
+    margin-bottom: 54px;
+    .text-review {
+      width: 319px;
+    }
+  }
+}
 </style>

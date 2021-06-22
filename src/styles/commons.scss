@@ -10,7 +10,18 @@
   src: url("../assets/typo/Butler_Medium.otf");
 }
 
+* {
+  box-sizing: border-box;
+}
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
 body {
+  height: 100%;
+  width: 100vw;
+  margin: 0;
+  overflow-x: hidden;
   background-color: $albatre;
   font-family: $ff-kulim;
 }
@@ -45,7 +56,7 @@ h4 {
 }
 
 button {
-  background-color: $olive;
+  background-color: $bistre;
   border-radius: 3px;
   padding: 20px 26px 20px 26px;
   border: none;
@@ -56,6 +67,22 @@ button {
     font-family: $ff-kulim;
   }
   &:hover {
-    background-color: $bistre;
+    background-color: $bistre-hover;
+    padding: 18px 24px 18px 24px;
+  }
+}
+
+.button-secondary {
+  border-radius: 3px;
+  border: 1px solid $olive;
+  background-color: transparent;
+  a {
+    color: $olive;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: $ff-kulim;
+  }
+  &:hover {
+    background-color: $secondary-button-hover;
   }
 }

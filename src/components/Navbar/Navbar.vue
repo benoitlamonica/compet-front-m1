@@ -9,36 +9,45 @@
         />
       </a>
     </div>
-    <div>
+    <!-- <div>
       <Button
         :isRouter="false"
         text="Commander mes repas"
         ariaLabel="Commander mes repas"
         link="https://persiletromarin.fr/inscription"
       />
-    </div>
+    </div> -->
   </nav>
 </template>
 
 <script>
-import Button from "@/components/Button";
+//import Button from "@/components/Button";
 
 export default {
   name: "Navbar",
-  components: { Button },
+  //components: { Button },
 };
 </script>
 
 <style lang="scss" scoped>
 .navbar {
   padding: 0 120px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
   padding-top: 24px;
 
   .logo {
     width: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 6px 14px 0 14px;
+    .logo {
+      width: 83px;
+    }
   }
 }
 </style>

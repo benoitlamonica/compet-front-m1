@@ -23,7 +23,7 @@ export default {
           src: "chef_n1.png",
           alt: "chef",
           title: "Jeanne F",
-          subtitle: "chef à domicile",
+          subtitle: "cheffe à domicile",
           href: "#",
           text: `Cuisinière de coeur, je suis né en Gironde, j’y ai grandi. Elle a fait de moi ce que je suis aujourd’hui et elle se ressent dans ma cuisine; simple, honnête, humble et gourmande ...
                 Au fur et à mesure des années passés auprès de chefs comme Edouard Loubet, Patrick Henrioux ou en Dordogne où j’ai connu ma première étoile avec mon équipe, revenir en Gironde était pour moi devenu une évidence. 
@@ -67,7 +67,7 @@ export default {
           src: "chef_n1.png",
           alt: "chef",
           title: "Dianne F",
-          subtitle: "chef à domicile",
+          subtitle: "cheffe à domicile",
           href: "#",
           text: `Cuisinière de coeur, je suis né en Gironde, j’y ai grandi. Elle a fait de moi ce que je suis aujourd’hui et elle se ressent dans ma cuisine; simple, honnête, humble et gourmande ...
                 Au fur et à mesure des années passés auprès de chefs comme Edouard Loubet, Patrick Henrioux ou en Dordogne où j’ai connu ma première étoile avec mon équipe, revenir en Gironde était pour moi devenu une évidence. 

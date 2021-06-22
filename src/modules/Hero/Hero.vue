@@ -1,5 +1,8 @@
 <template>
   <div class="hero-container">
+    <div class="plate-img">
+      <img src="@/assets/img/hero_landing.png" alt="Bol de soupe" />
+    </div>
     <div class="text-bloc">
       <h1 class="title">
         Cette semaine c’est nos chefs qui cuisinent chez vous !
@@ -8,16 +11,22 @@
         Trouvez les plats cuisinés par nos chefs cette semaine qui pourraient
         vous régaler vous et votre famille en seulement quelques clics.
       </p>
-      <Button
-        isRouter
-        ariaLabel="Je trouve mes plats"
-        link="/game"
-        text="Je trouve mes plats"
-        class="cta-button"
-      />
-    </div>
-    <div class="plate-img">
-      <img src="@/assets/img/hero_landing.png" alt="Bol de soupe" />
+      <div class="button-group">
+        <Button
+          isRouter
+          ariaLabel="Je trouve mes plats"
+          link="/game"
+          text="Je trouve mes plats"
+          class="cta-button"
+        />
+        <Button
+          isRouter
+          ariaLabel="Commander mes repas"
+          link="https://persiletromarin.fr"
+          text="Commander mes repas"
+          class="cta-button button-secondary"
+        />
+      </div>
     </div>
     <div class="herbs-img">
       <img src="@/assets/img/top_herbes.png" alt="Persil et romarin" />
@@ -53,6 +62,7 @@ export default {
     }
     .cta-button {
       margin-top: 32px;
+      margin-right: 6px;
     }
   }
   .plate-img {
@@ -66,6 +76,52 @@ export default {
     left: -120px;
     top: 158px;
     z-index: -1;
+  }
+}
+@media screen and (max-width: 1360px) {
+  .hero-container {
+    .plate-img {
+      position: absolute;
+      height: 15vh;
+      img {
+        position: absolute;
+        height: 600px;
+        width: auto;
+        right: -14px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-container {
+    padding: 0 14px 70px 14px;
+    .text-bloc {
+      max-width: 100%;
+      .title {
+        font-size: 32px;
+        line-height: 38px;
+      }
+      .text {
+        font-size: 18px;
+        line-height: 33px;
+      }
+      .button-group {
+        text-align: center;
+        .cta-button {
+          width: 66%;
+        }
+      }
+    }
+    .plate-img {
+      position: relative;
+      height: 15vh;
+      img {
+        position: absolute;
+        height: 600px;
+        width: auto;
+        right: -14px;
+      }
+    }
   }
 }
 </style>

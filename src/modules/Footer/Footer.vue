@@ -99,4 +99,38 @@ export default {
     }
   }
 }
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 375px;
+    display: block;
+    padding: 33px 14px;
+    position: relative;
+    .logo {
+      img {
+        object-fit: contain;
+        width: 126px;
+        height: auto;
+        margin-left: -10px;
+      }
+    }
+    .centerContent {
+      .nav {
+        ul {
+          text-align: left;
+          display: block;
+          li {
+            margin-top: 17px;
+          }
+        }
+      }
+    }
+    .socials {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform-origin: center;
+      transform: translate(50%, 50%);
+    }
+  }
+}
 </style>
