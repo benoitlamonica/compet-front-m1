@@ -78,7 +78,7 @@ export default {
     z-index: -1;
   }
 }
-@media screen and (max-width: 1360px) {
+@media screen and (max-width: 1250px) {
   .hero-container {
     .plate-img {
       position: absolute;
