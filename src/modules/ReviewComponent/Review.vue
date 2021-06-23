@@ -39,6 +39,7 @@ export default {
   padding: 32px 24px;
   display: flex;
   justify-content: space-between;
+  border-radius: 5px;
   .profile-img {
     height: 62px;
     width: 62px;

@@ -33,13 +33,15 @@ export default {
     color: $olive;
     margin-right: 18px;
     .pre-number {
+      line-height: unset;
       font-size: 50px;
       font-family: $ff-butler-medium;
+      margin-top: 12px;
     }
     .number {
+      line-height: unset;
       font-family: $ff-butler-medium;
       font-size: 77px;
-      //margin-top: 12px;
     }
   }
   .text-infos {
@@ -66,6 +68,7 @@ export default {
     }
     .text-infos {
       text-align: center;
+      padding-right: 0;
       .title {
         font-size: 22px;
         line-height: 25px;

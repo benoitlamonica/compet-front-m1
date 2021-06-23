@@ -40,7 +40,9 @@
             <p class="chief-detail">
               {{ slide.text }}
             </p>
-            <a class="chief-link" :href="slide.href">Visiter son site</a>
+            <div class="chief-link-container">
+              <a class="chief-link" :href="slide.href">Visiter son site</a>
+            </div>
           </div>
         </div>
       </transition-group>
@@ -154,7 +156,7 @@ export default {
     .carousel-text {
       padding: 0 120px;
       flex: 0 0 100%;
-      height: 20em;
+      height: 25em;
       margin: 1em;
       justify-content: center;
       align-items: center;
@@ -175,11 +177,15 @@ export default {
         font-weight: 300;
         font-size: 18px;
         margin-bottom: 32px;
+        line-height: 26px;
       }
       .chief-link {
         color: $bistre;
         font-size: 18px;
         font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 3%;
+        line-height: 20px;
       }
     }
   }
@@ -241,11 +247,14 @@ export default {
           font-size: 18px;
           margin-bottom: 32px;
         }
-        .chief-link {
+        .chief-link-container {
           text-align: center;
-          color: $bistre;
-          font-size: 18px;
-          font-weight: 600;
+          .chief-link {
+            text-align: center;
+            color: $bistre;
+            font-size: 18px;
+            font-weight: 600;
+          }
         }
       }
     }

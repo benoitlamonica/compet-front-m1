@@ -8,7 +8,6 @@
       <StepsBloc />
       <Htwoandtext
         title="Un chef dans votre cuisine pour vos repas de la semaine"
-        text="Les chefs qui composent le réseau Persil & Romarin sont l’âme du service. C’est parce qu’ils sont tous professionnels et talentueux que les plats qu’ils préparent sont aussi bons & gourmands."
       />
       <Chief />
       <Concept />

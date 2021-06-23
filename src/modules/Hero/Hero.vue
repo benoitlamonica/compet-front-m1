@@ -49,8 +49,8 @@ export default {
   position: relative;
   .text-bloc {
     position: relative;
-    padding-top: 185px;
-    max-width: 45vw;
+    padding-top: 126px;
+    max-width: calc(50vw - 120px);
     .title {
       color: $olive;
     }
@@ -59,6 +59,7 @@ export default {
       font-size: 20px;
       color: $dark-chocolate;
       font-weight: 300;
+      line-height: 33px;
     }
     .cta-button {
       margin-top: 32px;
@@ -76,6 +77,15 @@ export default {
     left: -120px;
     top: 158px;
     z-index: -1;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .hero-container {
+    .plate-img {
+      img {
+        height: 1000px;
+      }
+    }
   }
 }
 @media screen and (max-width: 1250px) {
@@ -97,9 +107,11 @@ export default {
     padding: 0 14px 70px 14px;
     .text-bloc {
       max-width: 100%;
+      padding-top: 200px;
       .title {
         font-size: 32px;
-        line-height: 38px;
+        line-height: 36px;
+        font-weight: 800;
       }
       .text {
         font-size: 18px;
@@ -120,6 +132,13 @@ export default {
         height: 600px;
         width: auto;
         right: -14px;
+      }
+    }
+    .herbs-img {
+      left: -50px;
+      top: 400px;
+      img {
+        height: 100vh;
       }
     }
   }

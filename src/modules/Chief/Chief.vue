@@ -23,55 +23,55 @@ export default {
           src: "chef_n1.png",
           alt: "chef",
           title: "Jeanne F",
-          subtitle: "cheffe à domicile",
+          subtitle: "Cheffe à domicile",
           href: "#",
-          text: `Cuisinière de coeur, je suis né en Gironde, j’y ai grandi. Elle a fait de moi ce que je suis aujourd’hui et elle se ressent dans ma cuisine; simple, honnête, humble et gourmande ...
+          text: `Cuisinière de coeur, je suis née en Gironde, j’y ai grandi. Elle a fait de moi ce que je suis aujourd’hui et elle se ressent dans ma cuisine; simple, honnête, humble et gourmande ...
                 Au fur et à mesure des années passés auprès de chefs comme Edouard Loubet, Patrick Henrioux ou en Dordogne où j’ai connu ma première étoile avec mon équipe, revenir en Gironde était pour moi devenu une évidence. 
-                L’envie de m’installer comme chef à domicile ne m’a jamais quitté et aujourd’hui c’est un rêve qui se réalise !`,
+                L’envie de m’installer comme chef à domicile ne m’a jamais quittée et aujourd’hui c’est un rêve qui se réalise !`,
           id: 1,
         },
         {
           src: "chef_n1.png",
           alt: "chef",
           title: "Michel F",
-          subtitle: "chef à domicile",
+          subtitle: "Chef à domicile",
           href: "#",
           text: `Cuisinier de coeur, je suis né en Gironde, j’y ai grandi. Elle a fait de moi ce que je suis aujourd’hui et elle se ressent dans ma cuisine; simple, honnête, humble et gourmande ...
                 Au fur et à mesure des années passés auprès de chefs comme Edouard Loubet, Patrick Henrioux ou en Dordogne où j’ai connu ma première étoile avec mon équipe, revenir en Gironde était pour moi devenu une évidence. 
-                L’envie de m’installer comme chef à domicile ne m’a jamais quitté et aujourd’hui c’est un rêve qui se réalise !`,
+                L’envie de m’installer comme chef à domicile ne m’a jamais quittée et aujourd’hui c’est un rêve qui se réalise !`,
           id: 2,
         },
         {
           src: "chef_n1.png",
           alt: "chef",
           title: "Didier F",
-          subtitle: "chef à domicile",
+          subtitle: "Chef à domicile",
           href: "#",
           text: `Cuisinier de coeur, je suis né en Gironde, j’y ai grandi. Elle a fait de moi ce que je suis aujourd’hui et elle se ressent dans ma cuisine; simple, honnête, humble et gourmande ...
                 Au fur et à mesure des années passés auprès de chefs comme Edouard Loubet, Patrick Henrioux ou en Dordogne où j’ai connu ma première étoile avec mon équipe, revenir en Gironde était pour moi devenu une évidence. 
-                L’envie de m’installer comme chef à domicile ne m’a jamais quitté et aujourd’hui c’est un rêve qui se réalise !`,
+                L’envie de m’installer comme chef à domicile ne m’a jamais quittée et aujourd’hui c’est un rêve qui se réalise !`,
           id: 3,
         },
         {
           src: "chef_n1.png",
           alt: "chef",
           title: "Gerard F",
-          subtitle: "chef à domicile",
+          subtitle: "Chef à domicile",
           href: "#",
           text: `Cuisinier de coeur, je suis né en Gironde, j’y ai grandi. Elle a fait de moi ce que je suis aujourd’hui et elle se ressent dans ma cuisine; simple, honnête, humble et gourmande ...
                 Au fur et à mesure des années passés auprès de chefs comme Edouard Loubet, Patrick Henrioux ou en Dordogne où j’ai connu ma première étoile avec mon équipe, revenir en Gironde était pour moi devenu une évidence. 
-                L’envie de m’installer comme chef à domicile ne m’a jamais quitté et aujourd’hui c’est un rêve qui se réalise !`,
+                L’envie de m’installer comme chef à domicile ne m’a jamais quittée et aujourd’hui c’est un rêve qui se réalise !`,
           id: 4,
         },
         {
           src: "chef_n1.png",
           alt: "chef",
           title: "Dianne F",
-          subtitle: "cheffe à domicile",
+          subtitle: "Cheffe à domicile",
           href: "#",
-          text: `Cuisinière de coeur, je suis né en Gironde, j’y ai grandi. Elle a fait de moi ce que je suis aujourd’hui et elle se ressent dans ma cuisine; simple, honnête, humble et gourmande ...
+          text: `Cuisinière de coeur, je suis née en Gironde, j’y ai grandi. Elle a fait de moi ce que je suis aujourd’hui et elle se ressent dans ma cuisine; simple, honnête, humble et gourmande ...
                 Au fur et à mesure des années passés auprès de chefs comme Edouard Loubet, Patrick Henrioux ou en Dordogne où j’ai connu ma première étoile avec mon équipe, revenir en Gironde était pour moi devenu une évidence. 
-                L’envie de m’installer comme chef à domicile ne m’a jamais quitté et aujourd’hui c’est un rêve qui se réalise !`,
+                L’envie de m’installer comme chef à domicile ne m’a jamais quittée et aujourd’hui c’est un rêve qui se réalise !`,
           id: 5,
         },
       ],

@@ -1,7 +1,11 @@
 <template>
   <div class="h-text">
     <h2 class="title">{{ title }}</h2>
-    <p class="text">{{ text }}</p>
+    <p class="text">
+      Les chefs qui composent le réseau <span>Persil & Romarin</span> sont l’âme
+      du service. C’est parce qu’ils sont tous professionnels et talentueux que
+      les plats qu’ils préparent sont aussi bons & gourmands.
+    </p>
   </div>
 </template>
 
@@ -11,7 +15,7 @@ export default {
 
   props: {
     title: { type: String, required: true },
-    text: { type: String, required: true },
+    //text: { type: String, required: true },
   },
 };
 </script>
@@ -26,6 +30,12 @@ export default {
   }
   .text {
     font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    span {
+      font-weight: 600;
+      font-style: italic;
+    }
   }
 }
 @media screen and (max-width: 768px) {
