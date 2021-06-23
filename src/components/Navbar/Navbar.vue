@@ -43,6 +43,9 @@ export default {
   .nav-button {
     background-color: transparent;
     border: 1px solid $olive;
+    @media (max-width: 500px) {
+      display: none;
+    }
     .nav-a {
       color: $olive;
     }

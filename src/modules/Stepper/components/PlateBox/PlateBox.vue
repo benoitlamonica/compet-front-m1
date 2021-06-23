@@ -83,6 +83,7 @@ $padding: 17px;
     }
     @media (max-width: 500px) {
       max-width: none;
+      height: 200px;
     }
     padding: $padding;
     &::before {
