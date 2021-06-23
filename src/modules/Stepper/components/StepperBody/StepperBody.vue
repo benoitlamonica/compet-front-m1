@@ -46,6 +46,7 @@
       :hText="
         data.length === 0 ? 'Une prochaine fois !' : 'Tenté par ces plats ? '
       "
+      :arrow="data.length === 0 ? true : false"
     />
   </div>
 </template>

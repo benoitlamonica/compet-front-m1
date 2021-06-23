@@ -27,7 +27,7 @@
         </div>
       </div>
     </div>
-    <div v-if="windowSize > 600" class="stepper-footer-arrow-content">
+    <div v-if="windowSize > 600 && arrow" class="stepper-footer-arrow-content">
       <div class="stepper-footer-arrow">
         venez découvrir votre cadeau !
       </div>
@@ -39,12 +39,17 @@
 export default {
   name: "PlateFooter",
   data() {
-    return { windowSize: 0 };
+    return { windowSize: window.innerWidth };
   },
   props: {
     hText: {
       type: String,
       required: true,
+    },
+    arrow: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
   },
   methods: {
