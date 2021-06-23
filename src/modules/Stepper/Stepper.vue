@@ -64,7 +64,7 @@ export default {
   methods: {
     async getDataMainIngredient() {
       let rtr = await axios
-        .get("http://127.0.0.1:8000/ingredient/main")
+        .get("https://compet-back.herokuapp.com/ingredient/main")
         .then((rep) => {
           return rep.data;
         });
@@ -72,7 +72,7 @@ export default {
     },
     async getDataCondIngredient() {
       let rtr = await axios
-        .get("http://127.0.0.1:8000/ingredient/cond")
+        .get("https://compet-back.herokuapp.com/ingredient/cond")
         .then((rep) => {
           return rep.data;
         });
@@ -85,7 +85,7 @@ export default {
       });
 
       let fullEndPoint =
-        "http://127.0.0.1:8000/ingredient/plate?" + endPointStr;
+        "https://compet-back.herokuapp.com/ingredient/plate?" + endPointStr;
       console.log(fullEndPoint);
       let rtr = await axios.get(fullEndPoint).then((rep) => {
         return rep.data;
