@@ -2,7 +2,13 @@
   <div class="carousel-container">
     <div class="carousel-view">
       <transition-group class="carousel" tag="div">
-        <div v-for="slide in slidesData" class="slide" :key="slide.id">
+        <div
+          v-touch:swipe.left="next"
+          v-touch:swipe.right="previous"
+          v-for="slide in slidesData"
+          class="slide"
+          :key="slide.id"
+        >
           <img :src="require(`@/assets/img/${slide.src}`)" :alt="slide.alt" />
         </div>
       </transition-group>
@@ -71,7 +77,7 @@ export default {
     },
   },
   watch: {
-    slides: function (val) {
+    slides: function(val) {
       this.slideData = val;
     },
   },
