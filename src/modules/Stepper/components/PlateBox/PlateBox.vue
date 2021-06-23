@@ -28,7 +28,7 @@ export default {
   computed: {
     bImage() {
       let bImage =
-        this.urlImg || this.urlImg != undefined
+        this.urlImg != undefined
           ? `background-image : url(${this.base_url + this.urlImg})`
           : `background-image : url(${this.noImgUrl})`;
       console.log(bImage);
@@ -42,11 +42,18 @@ export default {
 $radius: 8px;
 $padding: 17px;
 .platebox-content {
-  margin: 35px 0;
+  margin: 10px 0;
   background-color: rgba($bistre, 0.1);
   width: 100%;
   padding: $padding;
   border-radius: $radius;
+  @media (max-width: 1160px) {
+  }
+  @media (max-width: 900px) {
+  }
+  @media (max-width: 500px) {
+    margin: 5px 0;
+  }
   .platebox-img {
     height: 150px;
     width: 100%;
@@ -60,43 +67,56 @@ $padding: 17px;
     font-size: 18px;
     margin-top: $padding;
   }
-  //   COUP DE COEUR
+  //   COUP DE COEUR -----------------------------
   &:nth-child(1) {
-    background-color: transparent;
     position: relative;
-    height: 400px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    min-height: 400px;
+    max-width: 400px;
+    margin: 32px auto;
     grid-row: 1/3;
-    padding: 0;
-    &::after {
-      content: "♥️ Coup de coeur";
-      color: $albatre;
-      border-radius: 4px;
-      font-weight: 300;
-      text-transform: uppercase;
+    @media (max-width: 1160px) {
+      margin: 10px auto;
+      width: 100%;
+      grid-column: 1/3;
+    }
+    @media (max-width: 500px) {
+      max-width: none;
+    }
+    padding: $padding;
+    &::before {
+      content: "";
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: $padding;
+      background-image: url("../../../../assets/img/cdc.svg");
+      background-size: contain;
+      background-position: center;
+      height: 50px;
+      width: 175px;
       position: absolute;
-      bottom: 86px;
-      left: -70px;
-      background-color: $bistre;
+      top: 45px;
+      left: -60px;
+      @media (max-width: 500px) {
+        top: 10px;
+        left: 0px;
+      }
     }
     .platebox-img {
-      height: 100%;
+      height: 86%;
       width: 100%;
       border-radius: $radius;
       border-top-left-radius: 200px;
       border-top-right-radius: 200px;
       background-size: cover;
+      background-repeat: no-repeat;
       background-position: center;
-      background-color: rgba(grey, 0.1);
     }
     .platebox-label {
-      position: absolute;
-      bottom: 10px;
       left: $padding;
     }
   }
+  //   COUP DE COEUR -----------------------------
 }
 </style>

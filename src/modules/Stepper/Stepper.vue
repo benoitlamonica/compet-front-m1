@@ -3,38 +3,44 @@
     <BreadCrumb :value="bcAdvance" />
     <div class="stepper-header">
       <h2>{{ titleAdvance }}</h2>
-      <small>
+      <small v-if="step < 3">
         Aucun ingrédient ne vous convient ?
-        <a @click="shuffleData()">En générer d’autres </a>
-        <i class="fas fa-sync-alt"></i>
+        <div class="generate-button">
+          <a @click="shuffleData()">En générer d’autres </a>
+          <i class="fas fa-sync-alt"></i>
+        </div>
       </small>
     </div>
     <StepperBody
       :step="step"
       v-on:getIngChoosen="getIngFromChild"
+      v-on:stepReload="initialiseStepper"
       :data="dataIng"
     />
     <div class="stepper-footer">
-      <div
-        v-if="ingChoosenMain.length === 0 && step === 1"
-        class="stepper-alert"
+      <a v-if="step === 2" @click="stepBack()" class="stepper-back"
+        ><i class="fas fa-chevron-left"></i> Précédent</a
       >
-        Vous devez choisir au minimun une protéine pour pouvoir continuer.
-      </div>
-      <div
-        v-if="ingChoosenCond.length === 0 && step === 2"
-        class="stepper-alert"
-      >
-        Vous devez choisir au minimun un condiment pour pouvoir continuer.
-      </div>
       <Button
         :text="buttonText"
         :aria-label="buttonText"
         :isRouter="false"
+        :className="
+          step === 2 ? (ingChoosenCond.length !== 0 ? '' : 'not-clickable') : ''
+        "
+        v-if="step < 3"
         @click.native="stepAdvance()"
       />
     </div>
-    <a v-if="step > 1" @click="stepBack()">Retour</a>
+    <div v-if="ingChoosenMain.length === 0 && step === 1" class="stepper-alert">
+      Vous devez choisir au minimun une protéine pour pouvoir continuer.
+    </div>
+    <div v-if="ingChoosenCond.length === 0 && step === 2" class="stepper-alert">
+      Vous devez choisir au minimun un condiment pour pouvoir continuer.
+    </div>
+    <div v-if="step !== 3" class="bg-game">
+      <img src="@/assets/img/top_herbes.png" alt="Herbe" />
+    </div>
   </div>
 </template>
 
@@ -50,7 +56,7 @@ export default {
     return {
       dataIng: null,
       dataRaw: null,
-      step: 1,
+      step: 0,
       ingChoosenMain: [],
       ingChoosenCond: [],
     };
@@ -109,35 +115,35 @@ export default {
       this.dataIng = this.dataRaw;
     },
     stepAdvance() {
-      this.step++;
-      if (this.step === 2) {
+      if (this.step === 1) {
         this.getDataCondIngredient().then((data) => {
           this.dataRaw = data;
           this.shuffleData();
+          this.step++;
         });
       } else {
-        this.step = 3;
         let allIngChoosen = [...this.ingChoosenMain, ...this.ingChoosenCond];
         console.log(allIngChoosen);
         this.getDataPlateByIngredient(allIngChoosen).then((data) => {
           console.log(data);
           this.dataRaw = data;
           this.shuffleDataPlate();
+          this.step = 3;
         });
       }
     },
     stepBack() {
-      this.step--;
-      if (this.step === 2) {
+      if (this.step === 3) {
         this.getDataCondIngredient().then((data) => {
           this.dataRaw = data;
           this.shuffleData();
+          this.step--;
         });
       } else {
-        this.step = 1;
         this.getDataMainIngredient().then((data) => {
           this.dataRaw = data;
           this.shuffleData();
+          this.step = 1;
         });
       }
     },
@@ -154,6 +160,15 @@ export default {
       } else {
         this.addOrRemoveIdFromArray(this.ingChoosenCond, id);
       }
+    },
+    initialiseStepper() {
+      this.step = 1;
+      this.ingChoosenCond = [];
+      this.ingChoosenMain = [];
+      this.getDataMainIngredient().then((data) => {
+        this.dataRaw = data;
+        this.shuffleData();
+      });
     },
   },
   computed: {
@@ -194,7 +209,7 @@ export default {
       let text =
         this.ingChoosenMain.length === 0 && this.step === 1
           ? "Je ne mange pas de viande"
-          : "Continue";
+          : "Continuer";
       return text;
     },
     alertText() {
@@ -203,10 +218,7 @@ export default {
     },
   },
   mounted() {
-    this.getDataMainIngredient().then((data) => {
-      this.dataRaw = data;
-      this.shuffleData();
-    });
+    this.initialiseStepper();
   },
 };
 </script>
@@ -215,21 +227,52 @@ export default {
 $radius: 3px;
 .stepper-content {
   a {
-    text-decoration: underline;
     cursor: pointer;
+  }
+  .stepper-back {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    i {
+      margin-right: 0.5em;
+      text-decoration: unset;
+    }
   }
   .stepper-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    .generate-button {
+      display: inline;
+    }
     h2 {
       display: block;
       flex-basis: 50%;
+      min-width: 300px;
+      max-width: 600px;
+      flex-grow: 1;
       color: $olive;
     }
     small {
       color: $bistre;
       font-size: 14px;
+      a {
+        text-decoration: underline;
+      }
+    }
+    @media (max-width: 800px) {
+      h2 {
+        max-width: 350px;
+      }
+      .generate-button {
+        display: block;
+      }
+      small {
+        padding: 30px 70px 0px;
+      }
+      margin-bottom: 30px;
     }
   }
   .stepper-footer {
@@ -239,14 +282,26 @@ $radius: 3px;
     button {
       margin: 30px 0 30px auto;
     }
-    .stepper-alert {
-      text-align: center;
-      //border: 1px solid $olive;
-      padding: 18px 0px;
-      color: $olive;
-      margin: 30px 0;
-      border-radius: $radius;
-      font-weight: 600;
+  }
+  .stepper-alert {
+    text-align: center;
+    @media (max-width: 600px) {
+      max-width: 300px;
+    }
+    //border: 1px solid $olive;
+    color: $olive;
+    margin: 10px auto 20px;
+    border-radius: $radius;
+    font-weight: 600;
+  }
+  .bg-game {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    img {
+      object-fit: contain;
+      object-position: 0 400px;
     }
   }
 }

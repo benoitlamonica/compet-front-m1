@@ -15,6 +15,8 @@
         text="Commander mes repas"
         ariaLabel="Commander mes repas"
         link="https://persiletromarin.fr/inscription"
+        className="nav-button"
+        classA="nav-a"
       />
     </div>
   </nav>
@@ -29,13 +31,19 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 24px;
-
+  .nav-button {
+    background-color: transparent;
+    border: 1px solid $olive;
+    .nav-a {
+      color: $olive;
+    }
+  }
   .logo {
     width: 150px;
   }

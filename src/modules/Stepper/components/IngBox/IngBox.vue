@@ -62,8 +62,12 @@ $width: 100%;
 .ing-box-content {
   cursor: pointer;
   width: $width;
+  max-width: 300px;
   border-radius: $radius;
   margin: $margin;
+  @media (max-width: 600px) {
+    margin: 5px 0;
+  }
   padding: $padding;
   background-color: rgba($bistre, 0.1);
   transition: ease 0.1s;
@@ -71,7 +75,7 @@ $width: 100%;
     opacity: 0.5;
   }
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   .ing-box-label {
     margin-top: $padding;
@@ -99,7 +103,17 @@ $width: 100%;
   background-color: rgba(grey, 0.1);
 }
 .disable {
+  position: relative;
   background-color: rgba($bistre, 0.3);
   border: 0.5px solid $olive;
+  &::after {
+    font-family: "Font Awesome\ 5 Free";
+    content: "\f00c";
+    color: $olive;
+    display: block;
+    position: absolute;
+    bottom: $padding;
+    right: $padding;
+  }
 }
 </style>

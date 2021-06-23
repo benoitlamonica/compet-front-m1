@@ -114,6 +114,12 @@ $height: 26px;
       color: $olive;
       font-weight: 600;
     }
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+  @media (max-width: 800px) {
+    margin-bottom: 40px;
   }
 }
 </style>
