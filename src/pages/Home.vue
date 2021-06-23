@@ -2,7 +2,7 @@
   <div class="app">
     <header>
       <wrapper>
-        <Navbar />
+        <Navbar :isGame="false" />
       </wrapper>
     </header>
     <main>

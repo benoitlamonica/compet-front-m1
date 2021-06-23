@@ -9,7 +9,7 @@
         />
       </a>
     </div>
-    <div>
+    <div v-if="isGame">
       <Button
         :isRouter="false"
         text="Commander mes repas"
@@ -28,6 +28,9 @@ import Button from "@/components/Button";
 export default {
   name: "Navbar",
   components: { Button },
+  props: {
+    isGame: { type: Boolean, required: true },
+  },
 };
 </script>
 

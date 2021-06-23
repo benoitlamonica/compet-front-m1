@@ -1,6 +1,6 @@
 <template>
   <wrapper>
-    <Navbar />
+    <Navbar isGame />
     <Stepper />
   </wrapper>
 </template>

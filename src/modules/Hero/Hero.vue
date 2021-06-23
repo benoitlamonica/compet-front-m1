@@ -20,7 +20,7 @@
           class="cta-button"
         />
         <Button
-          isRouter
+          :isRouter="false"
           ariaLabel="Commander mes repas"
           link="https://persiletromarin.fr"
           text="Commander mes repas"
