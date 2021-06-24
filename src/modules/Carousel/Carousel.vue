@@ -68,7 +68,7 @@
         </transition-group>
       </div>
     </div>
-    <Pagination :array="slidesData" :arrayKey="1" />
+    <Pagination :array="slidesData" />
   </div>
 </template>
 

@@ -18,10 +18,6 @@ export default {
       type: Array,
       required: true,
     },
-    arrayKey: {
-      type: Number,
-      required: true,
-    },
   },
 };
 </script>
