@@ -3,9 +3,14 @@
     <router-link v-if="isRouter" :to="link">
       <a :class="classA" :aria-label="ariaLabel">{{ text }}</a>
     </router-link>
-    <a :class="classA" v-else :href="link" :aria-label="ariaLabel">{{
-      text
-    }}</a>
+    <a
+      :class="classA"
+      v-else
+      :href="link"
+      target="_blank"
+      :aria-label="ariaLabel"
+      >{{ text }}</a
+    >
   </button>
 </template>
 

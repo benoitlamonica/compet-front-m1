@@ -48,9 +48,18 @@
             <div class="chief-text">
               <h4 class="chief-title">{{ slide.title }}</h4>
               <p class="chief-subtitle">{{ slide.subtitle }}</p>
-              <p class="chief-detail">
-                {{ slide.text }}
-              </p>
+              <div>
+                <p
+                  :class="
+                    readMoreExtend ? 'chief-detail clamp-unset' : 'chief-detail'
+                  "
+                >
+                  {{ slide.text }}
+                </p>
+                <a class="read-more" @click="readMore">{{
+                  readMoreExtend ? "Réduire le texte" : "Lire plus"
+                }}</a>
+              </div>
               <div class="chief-link-container">
                 <a class="chief-link" :href="slide.href">Visiter son site</a>
               </div>
@@ -69,13 +78,19 @@ export default {
   components: { Pagination },
   name: "Carousel",
   data() {
-    return { slidesData: this.slides };
+    return {
+      slidesData: this.slides,
+      readMoreExtend: false,
+    };
   },
   props: {
     slides: { type: Array, required: true },
   },
 
   methods: {
+    readMore() {
+      this.readMoreExtend = !this.readMoreExtend;
+    },
     next() {
       const first = this.slidesData.shift();
       this.slidesData = this.slidesData.concat(first);
@@ -86,7 +101,7 @@ export default {
     },
   },
   watch: {
-    slides: function(val) {
+    slides: function (val) {
       this.slideData = val;
     },
   },
@@ -97,7 +112,6 @@ export default {
 .carousel-container {
   overflow: hidden;
   margin-top: 56px;
-  margin-bottom: 125px;
   display: flex;
   .carousel-view {
     padding-left: 120px;
@@ -171,7 +185,7 @@ export default {
     .carousel-text {
       padding: 0 120px;
       flex: 0 0 100%;
-      height: 25em;
+      height: auto;
       margin: 1em;
       justify-content: center;
       align-items: center;
@@ -202,12 +216,39 @@ export default {
         letter-spacing: 3%;
         line-height: 20px;
       }
+      .read-more {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1060px) {
+  .carousel-container {
+    .text-view {
+      .chief-text {
+        .chief-detail {
+          margin-bottom: 0;
+          display: -webkit-box;
+          -webkit-line-clamp: 6;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .clamp-unset {
+          -webkit-line-clamp: unset;
+        }
+        .read-more {
+          display: inline-block;
+          margin-bottom: 32px;
+          margin-top: 6px;
+        }
+      }
     }
   }
 }
 @media screen and (max-width: 768px) {
   .carousel-container {
     display: block;
+    margin-bottom: 0;
     .carousel-view {
       padding: 0 14px;
       width: 100%;
@@ -224,17 +265,7 @@ export default {
         }
       }
       .carousel-controls {
-        position: absolute;
-        transform-origin: center;
-        transform: translate(50%);
-        top: 210%;
-        right: 50%;
-        .carousel-controls__button {
-          padding: 4px 24px;
-          svg {
-            height: 15;
-          }
-        }
+        display: none;
       }
     }
     .text-view {
@@ -242,7 +273,7 @@ export default {
       .card {
         width: 100%;
         .carousel-text {
-          height: 35rem;
+          height: auto;
           padding: 0 14px;
         }
       }
@@ -261,6 +292,13 @@ export default {
           line-height: 26px;
           font-size: 18px;
           margin-bottom: 32px;
+          display: -webkit-box;
+          -webkit-line-clamp: 6;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .clamp-unset {
+          -webkit-line-clamp: unset;
         }
         .chief-link-container {
           text-align: center;
