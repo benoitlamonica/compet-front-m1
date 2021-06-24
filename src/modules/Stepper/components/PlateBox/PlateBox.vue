@@ -10,7 +10,7 @@ export default {
   name: "PlateBox",
   data() {
     return {
-      base_url: "https://compet-back.herokuapp.com/images/plate/",
+      base_url: "http://127.0.0.1:8000/images/plate/",
       noImgUrl:
         "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg",
     };

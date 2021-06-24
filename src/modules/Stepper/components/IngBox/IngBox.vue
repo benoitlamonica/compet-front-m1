@@ -24,7 +24,7 @@ export default {
   name: "IngBox",
   data() {
     return {
-      base_url: "https://compet-back.herokuapp.com/images/ing/",
+      base_url: "http://127.0.0.1:8000/images/ing/",
       no_img_url:
         "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg",
     };

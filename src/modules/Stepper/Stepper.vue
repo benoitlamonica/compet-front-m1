@@ -64,7 +64,7 @@ export default {
   methods: {
     async getDataMainIngredient() {
       let rtr = await axios
-        .get("https://compet-back.herokuapp.com/ingredient/main")
+        .get("http://127.0.0.1:8000/ingredient/main")
         .then((rep) => {
           return rep.data;
         });
@@ -72,7 +72,7 @@ export default {
     },
     async getDataCondIngredient() {
       let rtr = await axios
-        .get("https://compet-back.herokuapp.com/ingredient/cond")
+        .get("http://127.0.0.1:8000/ingredient/cond")
         .then((rep) => {
           return rep.data;
         });
@@ -85,7 +85,7 @@ export default {
       });
 
       let fullEndPoint =
-        "https://compet-back.herokuapp.com/ingredient/plate?" + endPointStr;
+        "http://127.0.0.1:8000/ingredient/plate?" + endPointStr;
       console.log(fullEndPoint);
       let rtr = await axios.get(fullEndPoint).then((rep) => {
         return rep.data;
@@ -104,6 +104,17 @@ export default {
           data[currentIndex],
         ];
       }
+
+      let [rtr] = data.filter((data) => {
+        return data.name === "Citron";
+      });
+      console.log("CITROOOON", rtr);
+      if (rtr != undefined) {
+        this.dataIng = data.slice(0, 5);
+        this.dataIng.push(rtr);
+        return;
+      }
+
       this.dataIng = data.slice(0, 6);
     },
     shuffleDataPlate() {
