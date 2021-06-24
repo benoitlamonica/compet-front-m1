@@ -240,6 +240,7 @@ export default {
         }
         .read-more {
           display: inline-block;
+          text-decoration: underline;
           margin-bottom: 32px;
           margin-top: 6px;
         }

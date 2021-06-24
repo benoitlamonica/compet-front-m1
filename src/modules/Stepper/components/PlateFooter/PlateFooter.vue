@@ -74,7 +74,7 @@ $radius: 8px;
   position: absolute;
   text-align: center;
   width: 140px;
-  top: -80px;
+  top: -100px;
   right: 46px;
   font-family: $ff-butler;
   color: $olive;
