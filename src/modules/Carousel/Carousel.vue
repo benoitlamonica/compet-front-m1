@@ -42,6 +42,8 @@
         <transition-group class="card" tag="div">
           <div
             v-for="slide in slidesData"
+            v-touch:swipe.left="next"
+            v-touch:swipe.right="previous"
             :key="slide.id"
             class="carousel-text"
           >
@@ -101,7 +103,7 @@ export default {
     },
   },
   watch: {
-    slides: function (val) {
+    slides: function(val) {
       this.slideData = val;
     },
   },

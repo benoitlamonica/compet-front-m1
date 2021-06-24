@@ -69,7 +69,7 @@ export default {
   .plate-img {
     position: absolute;
     right: 0;
-    top: -120px;
+    top: -149px;
     z-index: -1;
   }
   .herbs-img {

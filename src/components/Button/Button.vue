@@ -21,7 +21,7 @@ export default {
   props: {
     text: { type: String, required: true },
     ariaLabel: { type: String, required: true },
-    link: { type: String, required: false, default: "#" },
+    link: { type: String, required: false },
     isRouter: { type: Boolean, required: true },
     className: { type: String, required: false, default: "" },
     classA: { type: String, required: false, default: "" },
