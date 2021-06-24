@@ -1,63 +1,72 @@
 <template>
-  <div class="carousel-container">
-    <div class="carousel-view">
-      <transition-group class="carousel" tag="div">
-        <div
-          v-touch:swipe.left="next"
-          v-touch:swipe.right="previous"
-          v-for="slide in slidesData"
-          class="slide"
-          :key="slide.id"
-        >
-          <img :src="require(`@/assets/img/${slide.src}`)" :alt="slide.alt" />
+  <div>
+    <div class="carousel-container">
+      <div class="carousel-view">
+        <transition-group class="carousel" tag="div">
+          <div
+            v-touch:swipe.left="next"
+            v-touch:swipe.right="previous"
+            v-for="slide in slidesData"
+            class="slide"
+            :key="slide.id"
+          >
+            <img :src="require(`@/assets/img/${slide.src}`)" :alt="slide.alt" />
+          </div>
+        </transition-group>
+        <div class="carousel-controls">
+          <button class="carousel-controls__button" @click="previous">
+            <svg
+              width="13"
+              height="21"
+              viewBox="0 0 13 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M12.6044 20L0.816527 10.5L12.6044 1" stroke="#F7F5EE" />
+            </svg>
+          </button>
+          <button class="carousel-controls__button" @click="next">
+            <svg
+              width="14"
+              height="21"
+              viewBox="0 0 14 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M1.01605 1L12.8039 10.5L1.01605 20" stroke="#F7F5EE" />
+            </svg>
+          </button>
         </div>
-      </transition-group>
-      <div class="carousel-controls">
-        <button class="carousel-controls__button" @click="previous">
-          <svg
-            width="13"
-            height="21"
-            viewBox="0 0 13 21"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M12.6044 20L0.816527 10.5L12.6044 1" stroke="#F7F5EE" />
-          </svg>
-        </button>
-        <button class="carousel-controls__button" @click="next">
-          <svg
-            width="14"
-            height="21"
-            viewBox="0 0 14 21"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M1.01605 1L12.8039 10.5L1.01605 20" stroke="#F7F5EE" />
-          </svg>
-        </button>
       </div>
-    </div>
-    <div class="text-view">
-      <transition-group class="card" tag="div">
-        <div v-for="slide in slidesData" :key="slide.id" class="carousel-text">
-          <div class="chief-text">
-            <h4 class="chief-title">{{ slide.title }}</h4>
-            <p class="chief-subtitle">{{ slide.subtitle }}</p>
-            <p class="chief-detail">
-              {{ slide.text }}
-            </p>
-            <div class="chief-link-container">
-              <a class="chief-link" :href="slide.href">Visiter son site</a>
+      <div class="text-view">
+        <transition-group class="card" tag="div">
+          <div
+            v-for="slide in slidesData"
+            :key="slide.id"
+            class="carousel-text"
+          >
+            <div class="chief-text">
+              <h4 class="chief-title">{{ slide.title }}</h4>
+              <p class="chief-subtitle">{{ slide.subtitle }}</p>
+              <p class="chief-detail">
+                {{ slide.text }}
+              </p>
+              <div class="chief-link-container">
+                <a class="chief-link" :href="slide.href">Visiter son site</a>
+              </div>
             </div>
           </div>
-        </div>
-      </transition-group>
+        </transition-group>
+      </div>
     </div>
+    <Pagination :array="slidesData" :arrayKey="1" />
   </div>
 </template>
 
 <script>
+import Pagination from "../../components/Pagination/Pagination.vue";
 export default {
+  components: { Pagination },
   name: "Carousel",
   data() {
     return { slidesData: this.slides };
